@@ -18,9 +18,10 @@ console.log (`Yargs` , yargs.argv);
 //..........processing the command line...
 if (command === `add`) {
     console.log (`Adding new note`);
+    notes.addNote (yargs.argv.title, yargs.argv.body);
 }
 else if (command === `list`) {
-console.log (`Listing all notes.`);
+notes.getAll(yargs.argv._);
 }
 else if (command === `read`) {
     console.log (`Reading note.`);
