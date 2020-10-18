@@ -24,7 +24,7 @@ else if (command === `list`) {
 notes.getAll(yargs.argv._);
 }
 else if (command === `read`) {
-    console.log (`Reading note.`);
+    notes.getNote(yargs.argv.title);
 }
 else if (command === `remove`) {
     console.log (`Removing note.`);
@@ -36,3 +36,6 @@ else if (command === undefined) {
 else {
     console.log (`"${command}" is not a valid command!`)
 }
+//  let stringObject = JSON.stringify(yargs.argv);
+//  console.log (stringObject);
+//  console.log (JSON.parse(stringObject));
