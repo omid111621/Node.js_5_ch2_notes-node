@@ -18,14 +18,14 @@ module.exports.addNote = (title, body) => {
         title : title,
         body : body
 };
-
-notes.push(note);
+let isReb = notes.filter(m => m.title === title);
+if(isReb.length===0){notes.push(note);
 
 fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 fs.writeFileSync('notes-data.text', JSON.stringify(notes));
 console.log(notes);
 console.log(JSON.stringify(notes));
-console.log(notes[2]);
+console.log(notes[2]);}
 };
 module.exports.getAll = (_) => { console.log (`Getting and listing all notes.`);
 _.forEach( m => console.log (m));
